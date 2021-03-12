@@ -75,4 +75,31 @@ defmodule HomeworkWeb.Schemas.TransactionsSchema do
       resolve(&TransactionsResolver.delete_transaction/3)
     end
   end
+
+  @desc "Fields to sort transactions by"
+  enum :transaction_order_by_enum do
+    value :amount_asc, description: "Sort by amount in ascending order"
+    value :amount_desc, description: "Sort by amount in descending order"
+    value :category_asc, description: "Sort by category in ascending order"
+    value :category_desc, description: "Sort by category in descending order"
+    value :description_asc, description: "Sort by description in ascending order"
+    value :description_desc, description: "Sort by description in descending order"
+    value :inserted_at_asc, description: "Sort by inserted_at in ascending order"
+    value :inserted_at_desc, description: "Sort by inserted_at in descending order"
+    value :merchant_asc, description: "Sort by merchant in ascending order"
+    value :merchant_desc, description: "Sort by merchant in descending order"
+  end
+
+  @desc "Fields to filter transactions by"
+  input_object :transaction_where_input_type do
+    field :id_eq, :id
+    field :amount_gte, :integer
+    field :amount_lte, :integer
+    field :category_id_in, list_of(:id)
+    field :company_id_in, list_of(:id)
+    field :inserted_at_gte, :naive_datetime
+    field :inserted_at_lte, :naive_datetime
+    field :merchant_id_in, list_of(:id)
+    field :user_id_in, list_of(:id)
+  end
 end
