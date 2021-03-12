@@ -1,7 +1,7 @@
 defmodule Homework.Transactions.Transaction do
   use Ecto.Schema
   import Ecto.Changeset
-  alias HomeworkWeb.Categories.Category
+  alias Homework.Categories.Category
   alias Homework.Companies.Company
   alias Homework.Merchants.Merchant
   alias Homework.Users.User

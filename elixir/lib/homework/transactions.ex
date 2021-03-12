@@ -17,8 +17,9 @@ defmodule Homework.Transactions do
       [%Transaction{}, ...]
 
   """
-  def list_transactions(_args) do
-    Repo.all(Transaction)
+  def list_transactions(args) do
+    build_query(args)
+    |> Repo.all()
   end
 
   @doc """
@@ -100,5 +101,188 @@ defmodule Homework.Transactions do
   """
   def change_transaction(%Transaction{} = transaction, attrs \\ %{}) do
     Transaction.changeset(transaction, attrs)
+  end
+
+  @doc """
+  Builds transaction query based on supplied args.
+  """
+  defp build_query(args) do
+    Transaction
+    |> maybe_filter_by(args[:where])
+    |> maybe_order_by(args[:order_by])
+  end
+
+  @doc """
+  Adds filters to transaction query if valid filter args supplied.
+  """
+  defp maybe_filter_by(query, nil), do: query
+
+  defp maybe_filter_by(query, filter) do
+    query
+    |> maybe_filter_by_amount_lte(filter[:amount_lte])
+    |> maybe_filter_by_amount_gte(filter[:amount_gte])
+    |> maybe_filter_by_category_id_in(filter[:category_id_in])
+    |> maybe_filter_by_company_id_in(filter[:company_id_in])
+    |> maybe_filter_by_id_eq(filter[:id_eq])
+    |> maybe_filter_by_inserted_at_lte(filter[:inserted_at_lte])
+    |> maybe_filter_by_inserted_at_gte(filter[:inserted_at_gte])
+    |> maybe_filter_by_merchant_id_in(filter[:merchant_id_in])
+    |> maybe_filter_by_user_id_in(filter[:user_id_in])
+  end
+
+  @doc """
+  Filters transactions by amount less than or equal to provided value.
+  """
+  defp maybe_filter_by_amount_lte(query, nil), do: query
+
+  defp maybe_filter_by_amount_lte(query, amount) do
+    query
+    |> where([t], t.amount <= ^amount)
+  end
+
+  @doc """
+  Filters transactions by amount greater than or equal to provided value.
+  """
+  defp maybe_filter_by_amount_gte(query, nil), do: query
+
+  defp maybe_filter_by_amount_gte(query, amount) do
+    query
+    |> where([t], t.amount >= ^amount)
+  end
+
+  @doc """
+  Filters transactions by the provided category ids.
+  """
+  defp maybe_filter_by_category_id_in(query, nil), do: query
+
+  defp maybe_filter_by_category_id_in(query, category_ids) do
+    query
+    |> where([t], t.category_id in ^category_ids)
+  end
+
+  @doc """
+  Filters transactions by the provided company ids.
+  """
+  defp maybe_filter_by_company_id_in(query, nil), do: query
+
+  defp maybe_filter_by_company_id_in(query, company_ids) do
+    query
+    |> where([t], t.company_id in ^company_ids)
+  end
+
+  @doc """
+  Filters transactions by the provided transaction id.
+  """
+  defp maybe_filter_by_id_eq(query, nil), do: query
+
+  defp maybe_filter_by_id_eq(query, id) do
+    query
+    |> where([t], t.id == ^id)
+  end
+
+  @doc """
+  Filters transactions by inserted timestamp less than or
+  equal to provided value.
+  """
+  defp maybe_filter_by_inserted_at_lte(query, nil), do: query
+
+  defp maybe_filter_by_inserted_at_lte(query, timestamp) do
+    query
+    |> where([t], t.inserted_at <= ^timestamp)
+  end
+
+  @doc """
+  Filters transactions by inserted timestamp greater than or
+  equal to provided value.
+  """
+  defp maybe_filter_by_inserted_at_gte(query, nil), do: query
+
+  defp maybe_filter_by_inserted_at_gte(query, timestamp) do
+    query
+    |> where([t], t.inserted_at >= ^timestamp)
+  end
+
+  @doc """
+  Filters transactions by the provided merchant ids.
+  """
+  defp maybe_filter_by_merchant_id_in(query, nil), do: query
+
+  defp maybe_filter_by_merchant_id_in(query, merchant_ids) do
+    query
+    |> where([t], t.merchant_id in ^merchant_ids)
+  end
+
+  @doc """
+  Filters transactions by the provided user ids.
+  """
+  defp maybe_filter_by_user_id_in(query, nil), do: query
+
+  defp maybe_filter_by_user_id_in(query, user_ids) do
+    query
+    |> where([t], t.user_id in ^user_ids)
+  end
+
+  @doc """
+  Sorts transaction in ascending or descending order
+  by the given value.
+  """
+  defp maybe_order_by(query, nil), do: query
+
+  defp maybe_order_by(query, :amount_asc) do
+    query
+    |> order_by([t], asc: t.amount)
+  end
+
+  defp maybe_order_by(query, :amount_desc) do
+    query
+    |> order_by([t], desc: t.amount)
+  end
+
+  defp maybe_order_by(query, :category_asc) do
+    query
+    |> join(:left, [t], c in assoc(t, :category))
+    |> preload([t, c], [:category])
+    |> order_by([t, c], asc_nulls_last: c.name)
+  end
+
+  defp maybe_order_by(query, :category_desc) do
+    query
+    |> join(:left, [t], c in assoc(t, :category))
+    |> preload([t, c], [:category])
+    |> order_by([t, c], desc_nulls_last: c.name)
+  end
+
+  defp maybe_order_by(query, :description_asc) do
+    query
+    |> order_by([t], asc: t.description)
+  end
+
+  defp maybe_order_by(query, :description_desc) do
+    query
+    |> order_by([t], desc: t.description)
+  end
+
+  defp maybe_order_by(query, :inserted_at_asc) do
+    query
+    |> order_by([t], asc: t.inserted_at)
+  end
+
+  defp maybe_order_by(query, :inserted_at_desc) do
+    query
+    |> order_by([t], desc: t.inserted_at)
+  end
+
+  defp maybe_order_by(query, :merchant_asc) do
+    query
+    |> join(:left, [t], m in assoc(t, :merchant))
+    |> preload([t, m], [:merchant])
+    |> order_by([t, m], asc: m.name)
+  end
+
+  defp maybe_order_by(query, :merchant_desc) do
+    query
+    |> join(:left, [t], m in assoc(t, :merchant))
+    |> preload([t, m], [:merchant])
+    |> order_by([t, m], desc: m.name)
   end
 end

@@ -24,6 +24,8 @@ defmodule HomeworkWeb.Schema do
 
     @desc "Get all Transactions"
     field(:transactions, list_of(:transaction)) do
+      arg(:order_by, :transaction_order_by_enum)
+      arg(:where, :transaction_where_input_type)
       resolve(&TransactionsResolver.transactions/3)
     end
 
