@@ -88,6 +88,8 @@ defmodule HomeworkWeb.Schemas.TransactionsSchema do
     value :inserted_at_desc, description: "Sort by inserted_at in descending order"
     value :merchant_asc, description: "Sort by merchant in ascending order"
     value :merchant_desc, description: "Sort by merchant in descending order"
+    value :user_name_asc, description: "Sort by user name in ascending order"
+    value :user_name_desc, description: "Sort by user name in descending order"
   end
 
   @desc "Fields to filter transactions by"
