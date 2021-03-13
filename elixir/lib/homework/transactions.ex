@@ -285,4 +285,18 @@ defmodule Homework.Transactions do
     |> preload([t, m], [:merchant])
     |> order_by([t, m], desc: m.name)
   end
+
+  defp maybe_order_by(query, :user_name_asc) do
+    query
+    |> join(:left, [t], u in assoc(t, :user))
+    |> preload([t, u], [:user])
+    |> order_by([t, u], asc: fragment("CONCAT((?), ' ',(?))", u.first_name, u.last_name))
+  end
+
+  defp maybe_order_by(query, :user_name_desc) do
+    query
+    |> join(:left, [t], u in assoc(t, :user))
+    |> preload([t, u], [:user])
+    |> order_by([t, u], desc: fragment("CONCAT((?), ' ',(?))", u.first_name, u.last_name))
+  end
 end
