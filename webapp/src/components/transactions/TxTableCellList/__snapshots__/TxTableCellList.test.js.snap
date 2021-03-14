@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TxTableCellList component renders correctly 1`] = `
+Array [
+  .emotion-0 {
+  border: 1px solid #b4c1ec;
+  padding: 0px 6px;
+}
+
+<td
+    className="emotion-0"
+    data-testid="transaction-3810c583-1307-4433-8900-8ad6d743f13d-date"
+  >
+    Mar 11
+  </td>,
+  .emotion-0 {
+  border: 1px solid #b4c1ec;
+  padding: 0px 6px;
+}
+
+<td
+    className="emotion-0"
+    data-testid="transaction-3810c583-1307-4433-8900-8ad6d743f13d-userName"
+  >
+    John Doe
+  </td>,
+  .emotion-0 {
+  border: 1px solid #b4c1ec;
+  padding: 0px 6px;
+}
+
+<td
+    className="emotion-0"
+    data-testid="transaction-3810c583-1307-4433-8900-8ad6d743f13d-description"
+  >
+    Test
+  </td>,
+  .emotion-0 {
+  border: 1px solid #b4c1ec;
+  padding: 0px 6px;
+}
+
+<td
+    className="emotion-0"
+    data-testid="transaction-3810c583-1307-4433-8900-8ad6d743f13d-merchantName"
+  >
+    Taco Bell
+  </td>,
+  .emotion-0 {
+  border: 1px solid #b4c1ec;
+  padding: 0px 6px;
+}
+
+<td
+    className="emotion-0"
+    data-testid="transaction-3810c583-1307-4433-8900-8ad6d743f13d-category"
+  >
+    Restaurant
+  </td>,
+  .emotion-0 {
+  border: 1px solid #b4c1ec;
+  padding: 0px 6px;
+}
+
+<td
+    className="emotion-0"
+    data-testid="transaction-3810c583-1307-4433-8900-8ad6d743f13d-amount"
+  >
+    $1.00
+  </td>,
+]
+`;

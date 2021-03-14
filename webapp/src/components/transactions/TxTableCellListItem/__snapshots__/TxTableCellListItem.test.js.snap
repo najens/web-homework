@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TxTableCellListItem component renders correctly 1`] = `
+.emotion-0 {
+  border: 1px solid #b4c1ec;
+  padding: 0px 6px;
+}
+
+<td
+  className="emotion-0"
+  data-testid="transaction-782a1d8d-08dc-4ef8-bab0-d922038971a2-amount"
+>
+  $1.00
+</td>
+`;

@@ -1,9 +1,18 @@
-query GetTransactions {
-    transactions {
+query GetTransactions ($orderBy: TransactionOrderByEnum) {
+    transactions (orderBy: $orderBy) {
         id
-        user_id
+        insertedAt
+        user {
+            firstName
+            lastName
+        }
+        category {
+            name
+        }
         description
-        merchant_id
+        merchant {
+            name
+        }
         debit
         credit
         amount
