@@ -1,0 +1,231 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TxTable component renders correctly 1`] = `
+.emotion-20 {
+  border-collapse: collapse;
+  width: 90vw;
+}
+
+.emotion-12 {
+  background: linear-gradient(180deg,#e4edf9,#62a2f9bf);
+  font-size: 12px;
+  font-weight: bold;
+  overflow-x: scroll;
+}
+
+.emotion-1 {
+  border: 1px solid #b4c1ec;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: none;
+  border: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 24px;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  padding: 0px 6px;
+  width: 100%;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.emotion-0:focus {
+  outline: none;
+}
+
+.emotion-0:hover {
+  cursor: pointer;
+}
+
+.emotion-19 {
+  font-size: 12px;
+  line-height: 2;
+}
+
+.emotion-13 {
+  border: 1px solid #b4c1ec;
+  padding: 0px 6px;
+}
+
+<table
+  className="emotion-20"
+>
+  <tbody>
+    <tr
+      className="emotion-12"
+    >
+      <th
+        className="emotion-1"
+        style={
+          Object {
+            "width": "10%",
+          }
+        }
+      >
+        <button
+          className="emotion-0"
+          onClick={[Function]}
+        >
+          <span>
+            Date
+          </span>
+          <svg
+            aria-hidden={true}
+            className="MuiSvgIcon-root"
+            focusable="false"
+            style={
+              Object {
+                "fontSize": 24,
+              }
+            }
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+        </button>
+      </th>
+      <th
+        className="emotion-1"
+        style={
+          Object {
+            "width": "15%",
+          }
+        }
+      >
+        <button
+          className="emotion-0"
+          onClick={[Function]}
+        >
+          <span>
+            User
+          </span>
+        </button>
+      </th>
+      <th
+        className="emotion-1"
+        style={
+          Object {
+            "width": "30%",
+          }
+        }
+      >
+        <button
+          className="emotion-0"
+          onClick={[Function]}
+        >
+          <span>
+            Description
+          </span>
+        </button>
+      </th>
+      <th
+        className="emotion-1"
+        style={
+          Object {
+            "width": "15%",
+          }
+        }
+      >
+        <button
+          className="emotion-0"
+          onClick={[Function]}
+        >
+          <span>
+            Merchant
+          </span>
+        </button>
+      </th>
+      <th
+        className="emotion-1"
+        style={
+          Object {
+            "width": "15%",
+          }
+        }
+      >
+        <button
+          className="emotion-0"
+          onClick={[Function]}
+        >
+          <span>
+            Category
+          </span>
+        </button>
+      </th>
+      <th
+        className="emotion-1"
+        style={
+          Object {
+            "width": "15%",
+          }
+        }
+      >
+        <button
+          className="emotion-0"
+          onClick={[Function]}
+        >
+          <span>
+            Amount
+          </span>
+        </button>
+      </th>
+    </tr>
+    <tr
+      className="emotion-19"
+      data-testid="transaction-782a1d8d-08dc-4ef8-bab0-d922038971a2"
+    >
+      <td
+        className="emotion-13"
+        data-testid="transaction-782a1d8d-08dc-4ef8-bab0-d922038971a2-date"
+      >
+        Mar 12
+      </td>
+      <td
+        className="emotion-13"
+        data-testid="transaction-782a1d8d-08dc-4ef8-bab0-d922038971a2-userName"
+      >
+        Bobby Smith
+      </td>
+      <td
+        className="emotion-13"
+        data-testid="transaction-782a1d8d-08dc-4ef8-bab0-d922038971a2-description"
+      >
+        Hot Dogs
+      </td>
+      <td
+        className="emotion-13"
+        data-testid="transaction-782a1d8d-08dc-4ef8-bab0-d922038971a2-merchantName"
+      >
+        Taco Bell
+      </td>
+      <td
+        className="emotion-13"
+        data-testid="transaction-782a1d8d-08dc-4ef8-bab0-d922038971a2-category"
+      >
+        Medical
+      </td>
+      <td
+        className="emotion-13"
+        data-testid="transaction-782a1d8d-08dc-4ef8-bab0-d922038971a2-amount"
+      >
+        $3.04
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;

@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TxTableHeaderListItem component renders correctly 1`] = `
+.emotion-1 {
+  border: 1px solid #b4c1ec;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: none;
+  border: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 24px;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  padding: 0px 6px;
+  width: 100%;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.emotion-0:focus {
+  outline: none;
+}
+
+.emotion-0:hover {
+  cursor: pointer;
+}
+
+<th
+  className="emotion-1"
+  style={
+    Object {
+      "width": "10%",
+    }
+  }
+>
+  <button
+    className="emotion-0"
+    onClick={[Function]}
+  >
+    <span>
+      Date
+    </span>
+    <svg
+      aria-hidden={true}
+      className="MuiSvgIcon-root"
+      focusable="false"
+      style={
+        Object {
+          "fontSize": 24,
+        }
+      }
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M7 10l5 5 5-5z"
+      />
+    </svg>
+  </button>
+</th>
+`;
