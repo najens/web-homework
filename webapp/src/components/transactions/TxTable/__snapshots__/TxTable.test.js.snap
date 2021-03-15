@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TxTable component renders correctly 1`] = `
-.emotion-20 {
+.emotion-22 {
   border-collapse: collapse;
   width: 90vw;
 }
 
-.emotion-12 {
+.emotion-13 {
   background: linear-gradient(180deg,#e4edf9,#62a2f9bf);
   font-size: 12px;
   font-weight: bold;
@@ -50,22 +50,32 @@ exports[`TxTable component renders correctly 1`] = `
   cursor: pointer;
 }
 
-.emotion-19 {
+.emotion-21 {
   font-size: 12px;
-  line-height: 2;
+  line-height: 2.5;
 }
 
-.emotion-13 {
+.emotion-21:hover {
+  cursor: pointer;
+}
+
+.emotion-14 {
   border: 1px solid #b4c1ec;
   padding: 0px 6px;
 }
 
+.emotion-20 {
+  border: 1px solid #b4c1ec;
+  padding: 0px 6px;
+  direction: rtl;
+}
+
 <table
-  className="emotion-20"
+  className="emotion-22"
 >
   <tbody>
     <tr
-      className="emotion-12"
+      className="emotion-13"
     >
       <th
         className="emotion-1"
@@ -120,7 +130,7 @@ exports[`TxTable component renders correctly 1`] = `
         className="emotion-1"
         style={
           Object {
-            "width": "30%",
+            "width": "25%",
           }
         }
       >
@@ -171,7 +181,15 @@ exports[`TxTable component renders correctly 1`] = `
         className="emotion-1"
         style={
           Object {
-            "width": "15%",
+            "width": "8%",
+          }
+        }
+      />
+      <th
+        className="emotion-1"
+        style={
+          Object {
+            "width": "12%",
           }
         }
       >
@@ -186,44 +204,51 @@ exports[`TxTable component renders correctly 1`] = `
       </th>
     </tr>
     <tr
-      className="emotion-19"
+      className="emotion-21"
       data-testid="transaction-782a1d8d-08dc-4ef8-bab0-d922038971a2"
+      onClick={[Function]}
     >
       <td
-        className="emotion-13"
+        className="emotion-14"
         data-testid="transaction-782a1d8d-08dc-4ef8-bab0-d922038971a2-date"
       >
         Mar 12
       </td>
       <td
-        className="emotion-13"
+        className="emotion-14"
         data-testid="transaction-782a1d8d-08dc-4ef8-bab0-d922038971a2-userName"
       >
         Bobby Smith
       </td>
       <td
-        className="emotion-13"
+        className="emotion-14"
         data-testid="transaction-782a1d8d-08dc-4ef8-bab0-d922038971a2-description"
       >
         Hot Dogs
       </td>
       <td
-        className="emotion-13"
+        className="emotion-14"
         data-testid="transaction-782a1d8d-08dc-4ef8-bab0-d922038971a2-merchantName"
       >
         Taco Bell
       </td>
       <td
-        className="emotion-13"
+        className="emotion-14"
         data-testid="transaction-782a1d8d-08dc-4ef8-bab0-d922038971a2-category"
       >
         Medical
       </td>
       <td
-        className="emotion-13"
+        className="emotion-14"
+        data-testid="transaction-782a1d8d-08dc-4ef8-bab0-d922038971a2-filler"
+      >
+        
+      </td>
+      <td
+        className="emotion-20"
         data-testid="transaction-782a1d8d-08dc-4ef8-bab0-d922038971a2-amount"
       >
-        $3.04
+        3.04 $
       </td>
     </tr>
   </tbody>

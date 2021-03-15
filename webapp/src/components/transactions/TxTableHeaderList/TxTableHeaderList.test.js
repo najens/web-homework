@@ -17,10 +17,10 @@ describe('the TxTableHeaderList component', () => {
     expect(testRenderer.toJSON()).toMatchSnapshot()
   })
 
-  test('it renders 6 TxTableHeaderListItem children', () => {
+  test('it renders 7 TxTableHeaderListItem children', () => {
     const testInstance = testRenderer.root
     const headers = testInstance.findAllByType(TxTableHeaderListItem)
-    expect(headers).toHaveLength(6)
+    expect(headers).toHaveLength(7)
   })
 
   describe('the TxTableHeaderListItem child components', () => {

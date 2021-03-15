@@ -166,7 +166,7 @@ Array [
     className="emotion-1"
     style={
       Object {
-        "width": "30%",
+        "width": "25%",
       }
     }
   >
@@ -287,6 +287,18 @@ Array [
       </span>
     </button>
   </th>,
+  .emotion-0 {
+  border: 1px solid #b4c1ec;
+}
+
+<th
+    className="emotion-0"
+    style={
+      Object {
+        "width": "8%",
+      }
+    }
+  />,
   .emotion-1 {
   border: 1px solid #b4c1ec;
 }
@@ -328,7 +340,7 @@ Array [
     className="emotion-1"
     style={
       Object {
-        "width": "15%",
+        "width": "12%",
       }
     }
   >

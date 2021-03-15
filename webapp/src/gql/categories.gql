@@ -1,8 +1,7 @@
-query GetMerchants {
-  merchants {
+query GetCategories {
+  categories {
     id
     name
-    description
     insertedAt
     updatedAt
   }

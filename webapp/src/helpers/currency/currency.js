@@ -1,4 +1,12 @@
 export function convertCentsToUsDollars (cents) {
-  const dollars = cents / 100
-  return dollars.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
+  return cents / 100
+}
+
+export function convertDollarsToCents (dollars) {
+  return dollars * 100
+}
+
+export function validateDollarCents (numStr) {
+  const regex = /^[0-9]*\.[0-9][0-9]$/
+  return regex.test(numStr)
 }

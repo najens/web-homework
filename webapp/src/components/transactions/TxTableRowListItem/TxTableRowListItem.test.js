@@ -8,9 +8,10 @@ describe('TxTableRowListItem component', () => {
     const testRenderer = create(
       <TxTableRowListItem
         categoryName='Restaurant'
+        companyId='620c583-1307-4433-8900-8ad6d743f13d'
         date='Mar 11'
         description='Test'
-        dollarAmount='$1.00'
+        dollarAmount={1.00}
         id='3810c583-1307-4433-8900-8ad6d743f13d'
         indexIsOdd
         merchantName='Taco Bell'

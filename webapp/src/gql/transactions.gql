@@ -3,14 +3,21 @@ query GetTransactions ($orderBy: TransactionOrderByEnum) {
         id
         insertedAt
         user {
+            id
             firstName
             lastName
         }
         category {
+            id
+            name
+        }
+        company {
+            id
             name
         }
         description
         merchant {
+            id
             name
         }
         debit

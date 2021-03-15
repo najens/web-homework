@@ -1,0 +1,4 @@
+fragment NewTransaction on Transaction {
+  id
+  type
+}
