@@ -17,11 +17,18 @@ describe('TxTable component', () => {
         },
         category:{
           __typename: 'Category',
+          id: '620c583-1307-4433-8900-8ad6d743f13d',
           name: 'Medical'
+        },
+        company:{
+          __typename: 'Company',
+          id: '520c583-1307-4433-8900-8ad6d743f13d',
+          name: 'Test Company'
         },
         description: 'Hot Dogs',
         merchant: {
           __typename: 'Merchant',
+          id: '420c583-1307-4433-8900-8ad6d743f13d',
           name: 'Taco Bell'
         },
         debit: true,

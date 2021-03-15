@@ -64,9 +64,21 @@ Array [
 
 <td
     className="emotion-0"
+    data-testid="transaction-3810c583-1307-4433-8900-8ad6d743f13d-filler"
+  >
+    
+  </td>,
+  .emotion-0 {
+  border: 1px solid #b4c1ec;
+  padding: 0px 6px;
+  direction: rtl;
+}
+
+<td
+    className="emotion-0"
     data-testid="transaction-3810c583-1307-4433-8900-8ad6d743f13d-amount"
   >
-    $1.00
+    1 $ +
   </td>,
 ]
 `;

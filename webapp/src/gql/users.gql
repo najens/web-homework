@@ -1,0 +1,15 @@
+query GetUsers {
+  users {
+    id
+    firstName
+    lastName
+    companyId
+    company {
+      id
+      name
+    }
+    dob
+    insertedAt
+    updatedAt
+  }
+}

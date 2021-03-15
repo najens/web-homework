@@ -6,6 +6,7 @@ import { string, func } from 'prop-types'
 export default function TxTableHeaderListItem ({ asc, desc, heading, orderBy, refetchTransactions, setOrderBy, width }) {
   const isAsc = orderBy === asc
   const isDesc = orderBy === desc
+  const isFiller = heading === ''
 
   function handleHeaderClick () {
     const newOrderBy = isDesc ? asc : desc
@@ -15,11 +16,13 @@ export default function TxTableHeaderListItem ({ asc, desc, heading, orderBy, re
 
   return (
     <th css={headerStyle} style={{ width }}>
-      <button css={buttonStyle} onClick={handleHeaderClick}>
-        <span>{heading}</span>
-        {isAsc && <ArrowDropUp style={{ fontSize: 24 }} />}
-        {isDesc && <ArrowDropDown style={{ fontSize: 24 }} />}
-      </button>
+      {!isFiller && (
+        <button css={buttonStyle} onClick={handleHeaderClick}>
+          <span>{heading}</span>
+          {isAsc && <ArrowDropUp style={{ fontSize: 24 }} />}
+          {isDesc && <ArrowDropDown style={{ fontSize: 24 }} />}
+        </button>
+      )}
     </th>
   )
 }

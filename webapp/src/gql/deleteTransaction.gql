@@ -1,0 +1,21 @@
+mutation DeleteTransaction ($id: ID!) {
+  deleteTransaction (id: $id) {
+    id
+    description
+    amount
+    credit
+    debit
+    merchant {
+      name
+    }
+    user {
+      firstName
+      lastName
+    }
+    company {
+      name
+    }
+    insertedAt
+    updatedAt
+  }
+}

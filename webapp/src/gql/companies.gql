@@ -1,0 +1,10 @@
+query GetCompanies {
+  companies {
+    id
+    name
+    creditLine
+    availableCredit
+    insertedAt
+    updatedAt
+  }
+}

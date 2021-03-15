@@ -9,7 +9,7 @@ describe('TxTableCellListItem component', () => {
       <TxTableCellListItem
         columnKey='amount'
         id='782a1d8d-08dc-4ef8-bab0-d922038971a2'
-        val='$1.00'
+        val='1.00'
       />
     )
     expect(testRenderer.toJSON()).toMatchSnapshot()

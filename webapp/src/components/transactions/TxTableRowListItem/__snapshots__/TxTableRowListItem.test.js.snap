@@ -1,10 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TxTableRowListItem component renders correctly 1`] = `
-.emotion-6 {
+.emotion-7 {
   font-size: 12px;
-  line-height: 2;
+  line-height: 2.5;
   background-color: #e4edf9;
+}
+
+.emotion-7:hover {
+  cursor: pointer;
 }
 
 .emotion-0 {
@@ -12,9 +16,16 @@ exports[`TxTableRowListItem component renders correctly 1`] = `
   padding: 0px 6px;
 }
 
+.emotion-6 {
+  border: 1px solid #b4c1ec;
+  padding: 0px 6px;
+  direction: rtl;
+}
+
 <tr
-  className="emotion-6"
+  className="emotion-7"
   data-testid="transaction-3810c583-1307-4433-8900-8ad6d743f13d"
+  onClick={[Function]}
 >
   <td
     className="emotion-0"
@@ -48,9 +59,15 @@ exports[`TxTableRowListItem component renders correctly 1`] = `
   </td>
   <td
     className="emotion-0"
+    data-testid="transaction-3810c583-1307-4433-8900-8ad6d743f13d-filler"
+  >
+    
+  </td>
+  <td
+    className="emotion-6"
     data-testid="transaction-3810c583-1307-4433-8900-8ad6d743f13d-amount"
   >
-    $1.00
+    1 $ +
   </td>
 </tr>
 `;

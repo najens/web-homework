@@ -25,7 +25,7 @@ export default function TxTableHeaderList ({ refetchTransactions }) {
       desc: 'DESCRIPTION_DESC',
       heading: 'Description',
       key: 'description',
-      width: '30%'
+      width: '25%'
     },
     {
       asc: 'MERCHANT_ASC',
@@ -42,11 +42,18 @@ export default function TxTableHeaderList ({ refetchTransactions }) {
       width: '15%'
     },
     {
+      asc: '',
+      desc: '',
+      heading: '',
+      key: 'filler',
+      width: '8%'
+    },
+    {
       asc: 'AMOUNT_ASC',
       desc: 'AMOUNT_DESC',
       heading: 'Amount',
       key: 'amount',
-      width: '15%'
+      width: '12%'
     }
   ]
   return tableHeadings.map(th => {
